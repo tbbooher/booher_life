@@ -1,5 +1,5 @@
 require 'rbconfig'
-HOST_OS = RbConfig::CONFIG['host_os']
+
 source 'https://rubygems.org'
 gem 'rails', '3.2.2'
 group :assets do
@@ -20,7 +20,16 @@ gem "cucumber-rails", ">= 1.3.0", :group => :test
 gem "capybara", ">= 1.1.2", :group => :test
 gem "launchy", ">= 2.1.0", :group => :test
 gem "guard", ">= 0.6.2", :group => :development  
-case HOST_OS
+
+group :production do
+  gem 'thin'
+end
+
+gem "heroku"
+
+group :development do
+ HOST_OS = RbConfig::CONFIG['host_os']
+ case HOST_OS
   when /darwin/i
     gem 'rb-fsevent', :group => :development
     gem 'growl', :group => :development
@@ -31,12 +40,14 @@ case HOST_OS
     gem 'rb-fchange', :group => :development
     gem 'win32console', :group => :development
     gem 'rb-notifu', :group => :development
+ end
+
+ gem "guard-bundler", ">= 0.1.3", :group => :development
+ gem "guard-rails", ">= 0.0.3", :group => :development
+ gem "guard-livereload", ">= 0.3.0", :group => :development
+ gem "guard-rspec", ">= 0.4.3", :group => :development
+ gem "guard-cucumber", ">= 0.6.1", :group => :development
 end
-gem "guard-bundler", ">= 0.1.3", :group => :development
-gem "guard-rails", ">= 0.0.3", :group => :development
-gem "guard-livereload", ">= 0.3.0", :group => :development
-gem "guard-rspec", ">= 0.4.3", :group => :development
-gem "guard-cucumber", ">= 0.6.1", :group => :development
 gem "bson_ext", ">= 1.6.2"
 gem "mongoid", ">= 2.4.8"
 gem "devise", ">= 2.1.0.rc"

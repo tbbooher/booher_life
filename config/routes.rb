@@ -1,4 +1,6 @@
 BooherLife::Application.routes.draw do
+  resources :stressors
+
   authenticated :user do
     root :to => 'home#index'
   end
