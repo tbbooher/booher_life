@@ -1,4 +1,6 @@
 class StressorsController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /stressors
   # GET /stressors.json
   def index

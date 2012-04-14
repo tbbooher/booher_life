@@ -1,4 +1,5 @@
 class JournalEntriesController < ApplicationController
+  before_filter :authenticate_user!
   # GET /journal_entries
   # GET /journal_entries.json
   def index
