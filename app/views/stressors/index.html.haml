@@ -1,0 +1,23 @@
+%h1 Listing stressors
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th Status
+    %th
+    %th
+    %th
+
+  - @stressors.each do |stressor|
+    %tr
+      %td= stressor.name
+      %td= stressor.description
+      %td= stressor.status
+      %td= link_to 'Show', stressor
+      %td= link_to 'Edit', edit_stressor_path(stressor)
+      %td= link_to 'Destroy', stressor, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Stressor', new_stressor_path

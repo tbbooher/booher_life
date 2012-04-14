@@ -1,0 +1,11 @@
+= simple_form_for(@workout) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :workout_date
+    = f.input :description
+    = f.input :power
+    = f.input :crossfit_workout_id
+
+  .form-actions
+    = f.button :submit

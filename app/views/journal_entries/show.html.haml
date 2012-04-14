@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Entry date:
+  = @journal_entry.entry_date
+%p
+  %b Description:
+  = @journal_entry.description
+%p
+  %b Purity:
+  = @journal_entry.purity
+%p
+  %b Fitness:
+  = @journal_entry.fitness
+%p
+  %b Devotional:
+  = @journal_entry.devotional
+%p
+  %b Chrissy:
+  = @journal_entry.chrissy
+%p
+  %b Relational:
+  = @journal_entry.relational
+%p
+  %b Discipline:
+  = @journal_entry.discipline
+%p
+  %b Stress:
+  = @journal_entry.stress
+
+= link_to 'Edit', edit_journal_entry_path(@journal_entry)
+\|
+= link_to 'Back', journal_entries_path

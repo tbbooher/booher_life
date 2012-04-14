@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @stressor.name
+%p
+  %b Description:
+  = @stressor.description
+%p
+  %b Status:
+  = @stressor.status
+
+= link_to 'Edit', edit_stressor_path(@stressor)
+\|
+= link_to 'Back', stressors_path

@@ -1,0 +1,10 @@
+= simple_form_for(@stressor) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :description
+    = f.input :status
+
+  .form-actions
+    = f.button :submit

@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Workout date:
+  = @workout.workout_date
+%p
+  %b Description:
+  = @workout.description
+%p
+  %b Power:
+  = @workout.power
+%p
+  %b Crossfit workout:
+  = @workout.crossfit_workout_id
+
+= link_to 'Edit', edit_workout_path(@workout)
+\|
+= link_to 'Back', workouts_path
