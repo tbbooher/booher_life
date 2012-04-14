@@ -1,4 +1,8 @@
 BooherLife::Application.routes.draw do
+  resources :journal_entries
+
+  resources :workouts
+
   resources :stressors
 
   authenticated :user do
