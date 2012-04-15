@@ -2,8 +2,8 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :workout_date
-    = f.input :description
+    = f.input :workout_date, as: :date
+    = f.input :description, as: :text
     = f.input :power
     = f.input :crossfit_workout_id
 
