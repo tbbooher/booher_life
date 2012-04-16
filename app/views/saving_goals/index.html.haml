@@ -1,0 +1,25 @@
+%h1 Listing saving_goals
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th Goal date
+    %th Amount
+    %th
+    %th
+    %th
+
+  - @saving_goals.each do |saving_goal|
+    %tr
+      %td= saving_goal.name
+      %td= saving_goal.description
+      %td= saving_goal.goal_date
+      %td= saving_goal.amount
+      %td= link_to 'Show', saving_goal
+      %td= link_to 'Edit', edit_saving_goal_path(saving_goal)
+      %td= link_to 'Destroy', saving_goal, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Saving goal', new_saving_goal_path

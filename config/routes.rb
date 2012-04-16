@@ -1,4 +1,6 @@
 BooherLife::Application.routes.draw do
+  resources :saving_goals
+
   resources :journal_entries
 
   resources :workouts

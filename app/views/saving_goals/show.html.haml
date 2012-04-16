@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @saving_goal.name
+%p
+  %b Description:
+  = @saving_goal.description
+%p
+  %b Goal date:
+  = @saving_goal.goal_date
+%p
+  %b Amount:
+  = @saving_goal.amount
+
+= link_to 'Edit', edit_saving_goal_path(@saving_goal)
+\|
+= link_to 'Back', saving_goals_path
