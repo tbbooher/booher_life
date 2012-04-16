@@ -3,8 +3,11 @@
 
   .form-inputs
     = f.input :name
-    = f.input :description
-    = f.input :status
+    = f.input :description, as: :text
+    = f.input :long_term_vision, as: :text
+    = f.input :urgency, collection: [:extreme, :urgent, :can_wait]
+    = f.input :impact, collection: [:life_changing, :important, :not_critical]
+    = f.input :difficulty, collection: [:cant_change, :very_hard, :easy]
 
   .form-actions
     = f.button :submit
