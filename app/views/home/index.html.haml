@@ -1,3 +1,7 @@
-%h3 Home
-- @users.each do |user|
-  %p User: #{link_to user.name, user}
+%h3 This is Tim's life management interface
+
+%p This is a private place. Please respect it.
+
+%h2= link_to "Add journal entry", new_journal_entry_path
+%h2= link_to "Add workout", new_workout_path
+%h2= link_to "Add stressor", new_stressor_path

@@ -8,6 +8,7 @@ class Stressor
   field :urgency, type: Symbol
   field :impact, type: Symbol
   field :difficulty, type: Symbol
+  field :ranking, type: Integer
   # should have intensity over time
 
   # i think a major point here is wether i can do anything about it
