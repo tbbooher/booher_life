@@ -4,7 +4,7 @@ class Stressor
   field :description, :type => String
   field :status, :type => Symbol # should be of several categories
   field :mitigation_plan, type: String
-  field :long_term_vision, type: Text
+  field :long_term_vision, type: String
   field :urgency, type: Symbol
   field :impact, type: Symbol
   field :difficulty, type: Symbol
