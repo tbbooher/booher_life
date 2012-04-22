@@ -10,6 +10,8 @@
   %b Difficulty:
   = @next_step.difficulty
 
+= link_to 'Stressor', stressor_path(@stressor)
+\|
 = link_to 'Edit', edit_stressor_next_step_path(@stressor, @next_step)
 \|
 = link_to 'Back', stressor_next_steps_path(@stressor)

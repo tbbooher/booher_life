@@ -10,7 +10,7 @@ class Stressor
   field :difficulty, type: Symbol
   field :ranking, type: Integer
 
-  has_many :next_steps
+  has_many :next_steps, dependent: :destroy
 
   # should have intensity over time
 

@@ -2,6 +2,6 @@
 
 = render 'form'
 
-= link_to 'Show', @next_step
+= link_to 'Show', [@stressor, @next_step]
 \|
-= link_to 'Back', next_steps_path
+= link_to 'Back', stressor_next_steps_path(@stressor)

@@ -11,23 +11,30 @@
   = @stressor.long_term_vision
 %p
   %b Urgency:
-  = @stressor.urgency
+  = @stressor.urgency.to_s.titleize
 %p
   %b Impact:
-  = @stressor.impact
+  = @stressor.impact.to_s.titleize
 %p
   %b Difficulty:
-  = @stressor.difficulty
+  = @stressor.difficulty.to_s.titleize
 
+%p= link_to "New next step", new_stressor_next_step_path(@stressor)
 
 - if @stressor.next_steps.size > 0
   %h2 Next Steps
-  %table
-    - @stressor.next_steps.each do |step|
-      %tr
-        %td= step.task
-        %td= step.due_date
-        %td= step.difficulty.to_s
+  %table.table.table-striped
+    %thead
+      %th Task
+      %th Due Date
+      %th Difficulty
+    %tbody
+      - @stressor.next_steps.each do |step|
+        %tr
+          %td= link_to step.task, edit_stressor_next_step_path(@stressor.id,step.id)
+          %td= step.due_date
+          %td= step.status
+          %td= step.difficulty.to_s.titleize
 
 = link_to 'Edit', edit_stressor_path(@stressor)
 \|

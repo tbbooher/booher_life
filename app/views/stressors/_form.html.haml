@@ -8,6 +8,7 @@
     = f.input :urgency, collection: [:extreme, :urgent, :can_wait]
     = f.input :impact, collection: [:life_changing, :important, :not_critical]
     = f.input :difficulty, collection: DIFFICULTIES
+    = f.input :status, collection: STATUSES
       
   .form-actions
     = f.button :submit

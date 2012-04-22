@@ -11,14 +11,14 @@
 
   - @next_steps.each do |next_step|
     %tr
-      %td= next_step.task
+      %td= link_to next_step.task, edit_stressor_next_step_path(@stressor.id,next_step)
       %td= next_step.due_date
       %td= next_step.difficulty
       %td= next_step.status  
-      %td= link_to 'Show', stressor_next_steps_path(@stressor.id)
-      %td= link_to 'Edit', edit_stressor_next_step_path(@stressor.id,next_step)
       %td= link_to 'Destroy', stressor_next_steps_path(@stressor.id), :confirm => 'Are you sure?', :method => :delete
 
 %br
 
 = link_to 'New Next step', new_stressor_next_step_path(@stressor.id)
+\|
+= link_to 'Stressor', stressor_path(@stressor)
