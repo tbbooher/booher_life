@@ -1,0 +1,11 @@
+= simple_form_for([@stressor, @next_step]) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :task
+    = f.input :due_date, as: :date
+    = f.input :difficulty, collection: DIFFICULTIES
+    = f.input :status, collection: STATUSES
+
+  .form-actions
+    = f.button :submit

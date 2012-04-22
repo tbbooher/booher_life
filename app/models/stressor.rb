@@ -9,7 +9,11 @@ class Stressor
   field :impact, type: Symbol
   field :difficulty, type: Symbol
   field :ranking, type: Integer
+
+  has_many :next_steps
+
   # should have intensity over time
+
 
   # i think a major point here is wether i can do anything about it
   # a stress should have many tasks with a due date

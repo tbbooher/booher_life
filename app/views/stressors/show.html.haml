@@ -7,8 +7,27 @@
   %b Description:
   = @stressor.description
 %p
-  %b Status:
-  = @stressor.status
+  %b Vision:
+  = @stressor.long_term_vision
+%p
+  %b Urgency:
+  = @stressor.urgency
+%p
+  %b Impact:
+  = @stressor.impact
+%p
+  %b Difficulty:
+  = @stressor.difficulty
+
+
+- if @stressor.next_steps.size > 0
+  %h2 Next Steps
+  %table
+    - @stressor.next_steps.each do |step|
+      %tr
+        %td= step.task
+        %td= step.due_date
+        %td= step.difficulty.to_s
 
 = link_to 'Edit', edit_stressor_path(@stressor)
 \|

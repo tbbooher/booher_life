@@ -1,11 +1,15 @@
 BooherLife::Application.routes.draw do
+
+
   resources :saving_goals
 
   resources :journal_entries
 
   resources :workouts
 
-  resources :stressors
+  resources :stressors do
+    resources :next_steps
+  end
 
   authenticated :user do
     root :to => 'home#index'
