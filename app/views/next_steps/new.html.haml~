@@ -1,5 +1,0 @@
-%h1 New next_step
-
-= render 'form'
-
-= link_to 'Back', next_steps_path

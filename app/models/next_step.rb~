@@ -1,6 +1,0 @@
-class NextStep
-  include Mongoid::Document
-  field :task, :type => String
-  field :due_date, :type => Date
-  field :difficulty, :type => Symbol
-end
