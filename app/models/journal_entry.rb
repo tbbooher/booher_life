@@ -12,5 +12,6 @@ class JournalEntry
   field :discipline, :type => Integer
   field :stress, :type => Integer
   field :sick, type: Boolean
+  field :health_statement, :type => String
 
 end
