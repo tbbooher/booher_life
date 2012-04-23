@@ -11,5 +11,6 @@ class JournalEntry
   field :relational, :type => Integer
   field :discipline, :type => Integer
   field :stress, :type => Integer
+  field :sick, type: Boolean
 
 end
