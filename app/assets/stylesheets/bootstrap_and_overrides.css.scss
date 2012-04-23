@@ -3,4 +3,5 @@ $iconSpritePath: image-path('glyphicons-halflings.png');
 $iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
 @import "bootstrap";
 body { padding-top: 60px; }
+textarea { width: 100%; height:40px; }
 @import "bootstrap-responsive";
