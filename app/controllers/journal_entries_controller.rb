@@ -26,6 +26,7 @@ class JournalEntriesController < ApplicationController
   # GET /journal_entries/new.json
   def new
     @journal_entry = JournalEntry.new
+    @last_entry = JournalEntry.last
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,6 +43,7 @@ class JournalEntriesController < ApplicationController
   # POST /journal_entries.json
   def create
     @journal_entry = JournalEntry.new(params[:journal_entry])
+    @last_entry = JournalEntry.last
 
     respond_to do |format|
       if @journal_entry.save
