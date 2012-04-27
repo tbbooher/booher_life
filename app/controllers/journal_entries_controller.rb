@@ -37,6 +37,7 @@ class JournalEntriesController < ApplicationController
   # GET /journal_entries/1/edit
   def edit
     @journal_entry = JournalEntry.find(params[:id])
+    @last_entry = JournalEntry.last
   end
 
   # POST /journal_entries
