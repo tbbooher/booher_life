@@ -1,10 +1,11 @@
 %h2 Last Entry
-%p
-  %b Description:
-= @last_entry.description
-%p
-  %b Health Statement:
-  = @last_entry.health_statement
+.well
+  %p
+    %b Description:
+  = @last_entry.description
+  %p
+    %b Health Statement:
+    = @last_entry.health_statement
 
 = simple_form_for(@journal_entry) do |f|
   = f.error_notification
