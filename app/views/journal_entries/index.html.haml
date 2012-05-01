@@ -18,7 +18,7 @@
   - @journal_entries.each do |journal_entry|
     %tr
       %td= journal_entry.entry_date
-      %td= journal_entry.description
+      %td= truncate(journal_entry.description, length: 50)
       %td= journal_entry.purity
       %td= journal_entry.fitness
       %td= journal_entry.devotional
