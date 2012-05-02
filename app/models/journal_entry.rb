@@ -1,6 +1,7 @@
 class JournalEntry
   include Mongoid::Document
-  include Mongoid::MultiParameterAttributes 
+  include Mongoid::MultiParameterAttributes
+  include Mongoid::Timestamps
 
   field :entry_date, :type => Date
   field :description, :type => String
@@ -13,5 +14,6 @@ class JournalEntry
   field :stress, :type => Integer
   field :sick, type: Boolean
   field :health_statement, :type => String
+  field :to_do, type: String
 
 end
