@@ -11,9 +11,12 @@ class JournalEntry
   field :chrissy, :type => Integer
   field :relational, :type => Integer
   field :discipline, :type => Integer
+  field :facepicking, type: Integer
   field :stress, :type => Integer
   field :sick, type: Boolean
   field :health_statement, :type => String
   field :to_do, type: String
+  field :memory_verse, type: String
+
 
 end
