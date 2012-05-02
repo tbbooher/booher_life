@@ -27,6 +27,7 @@ class JournalEntriesController < ApplicationController
   def new
     @journal_entry = JournalEntry.new
     @last_entry = JournalEntry.last
+    @journal_entry.to_do = @last_entry.to_do if @last_entry
 
     respond_to do |format|
       format.html # new.html.erb
