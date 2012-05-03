@@ -2,6 +2,9 @@ BooherLife::Application.routes.draw do
 
   resources :saving_goals
 
+  get "journal_entries/analysis"
+  get "journal_entries/journal_entry_data"
+
   resources :journal_entries
 
   resources :workouts
@@ -9,8 +12,6 @@ BooherLife::Application.routes.draw do
   resources :stressors do
     resources :next_steps
   end
-
-  get "journal_entries/analysis"
 
   authenticated :user do
     root :to => 'home#index'

@@ -15,3 +15,4 @@
 //= require bootstrap
 //= require highcharts
 //= require_tree .
+

@@ -1,5 +1,23 @@
 class JournalEntriesController < ApplicationController
   before_filter :authenticate_user!
+
+  def analysis
+
+  end
+
+  def journal_entry_data
+    @data = Array.new
+    [:purity, :fitness, :devotional, :chrissy, :relational, :discipline, :facepicking, :stress].each do |cat|
+      @data.push({name: cat.to_s, data: JournalEntry.all.map(&cat)})
+    end
+
+    respond_to do |format|
+      format.html # index.html.erb
+                  # [{"name":"temperature","type":"areaspline","data":[[1327213807000,0],[1327214100000,0],[1327214403000,0],[1327214700000,0],[1327215000000,24],[1327215301000,59.8],[1327215603000,95.4],[1327215901000,120.8],[1327216202000,131.6]]}]
+      format.json { render json: @data.to_json }
+    end
+  end
+
   # GET /journal_entries
   # GET /journal_entries.json
   def index
@@ -7,7 +25,8 @@ class JournalEntriesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @journal_entries }
+      # [{"name":"temperature","type":"areaspline","data":[[1327213807000,0],[1327214100000,0],[1327214403000,0],[1327214700000,0],[1327215000000,24],[1327215301000,59.8],[1327215603000,95.4],[1327215901000,120.8],[1327216202000,131.6]]}]
+      format.json { render json: JournalEntry.all.as_json(only: [:purity, :fitness, :devotional, :chrissy, :relational, :discipline, :facepicking, :stress]) }
     end
   end
 
