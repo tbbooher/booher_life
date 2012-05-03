@@ -3,7 +3,7 @@ class JournalEntriesController < ApplicationController
   # GET /journal_entries
   # GET /journal_entries.json
   def index
-    @journal_entries = JournalEntry.desc(:entry_date)
+    @journal_entries = JournalEntry.desc(:entry_date).page(params[:page]).per(5)
 
     respond_to do |format|
       format.html # index.html.erb

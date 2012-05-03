@@ -1,5 +1,7 @@
 %h1 Listing journal_entries
 
+= @journal_entries.paginate
+
 %table
   %tr
     %th Entry date
@@ -33,3 +35,5 @@
 %br
 
 = link_to 'New Journal entry', new_journal_entry_path
+
+= @journal_entries.paginate

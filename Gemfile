@@ -55,3 +55,4 @@ gem "devise", ">= 2.1.0.rc"
 gem "bootstrap-sass", ">= 2.0.1"
 gem "simple_form"
 gem "highcharts-rails", "~> 2.2.1"
+gem 'kaminari'

@@ -76,3 +76,5 @@ db/*.sqlite3
 
 # vim artifacts
 **.swp
+
+pull_data.rake
