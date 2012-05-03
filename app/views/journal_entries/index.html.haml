@@ -1,8 +1,8 @@
-%h1 Listing journal_entries
+%h1 Listing Journal Entries
 
-= @journal_entries.paginate
+= paginate @journal_entries
 
-%table
+%table.table.zebra-striped
   %tr
     %th Entry date
     %th Description
@@ -36,4 +36,4 @@
 
 = link_to 'New Journal entry', new_journal_entry_path
 
-= @journal_entries.paginate
+= paginate @journal_entries
