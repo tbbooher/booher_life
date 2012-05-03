@@ -1,0 +1,25 @@
+%h1 Listing rewards_programs
+
+%table
+  %tr
+    %th Company
+    %th Miles
+    %th Expiration date
+    %th Number
+    %th
+    %th
+    %th
+
+  - @rewards_programs.each do |rewards_program|
+    %tr
+      %td= rewards_program.company
+      %td= rewards_program.miles
+      %td= rewards_program.expiration_date
+      %td= rewards_program.number
+      %td= link_to 'Show', rewards_program
+      %td= link_to 'Edit', edit_rewards_program_path(rewards_program)
+      %td= link_to 'Destroy', rewards_program, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Rewards program', new_rewards_program_path

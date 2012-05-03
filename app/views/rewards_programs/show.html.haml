@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Company:
+  = @rewards_program.company
+%p
+  %b Miles:
+  = @rewards_program.miles
+%p
+  %b Expiration date:
+  = @rewards_program.expiration_date
+%p
+  %b Number:
+  = @rewards_program.number
+
+= link_to 'Edit', edit_rewards_program_path(@rewards_program)
+\|
+= link_to 'Back', rewards_programs_path

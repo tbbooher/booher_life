@@ -1,5 +1,7 @@
 BooherLife::Application.routes.draw do
 
+  resources :rewards_programs
+
   resources :saving_goals
 
   get "journal_entries/analysis"

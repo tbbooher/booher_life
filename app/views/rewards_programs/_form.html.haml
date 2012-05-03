@@ -1,0 +1,11 @@
+= simple_form_for(@rewards_program) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :company
+    = f.input :miles
+    = f.input :expiration_date
+    = f.input :number
+
+  .form-actions
+    = f.button :submit
