@@ -8,15 +8,13 @@
     %th Number
     %th
     %th
-    %th
 
   - @rewards_programs.each do |rewards_program|
     %tr
-      %td= rewards_program.company
+      %td= link_to rewards_program.company, rewards_program.website
       %td= rewards_program.miles
       %td= rewards_program.expiration_date
       %td= rewards_program.number
-      %td= link_to 'Show', rewards_program
       %td= link_to 'Edit', edit_rewards_program_path(rewards_program)
       %td= link_to 'Destroy', rewards_program, :confirm => 'Are you sure?', :method => :delete
 
