@@ -1,6 +1,6 @@
 %h1 Listing workouts
 
-%table
+%table.table.zebra-striped
   %tr
     %th Workout date
     %th Description
@@ -8,15 +8,13 @@
     %th Crossfit workout
     %th
     %th
-    %th
 
   - @workouts.each do |workout|
     %tr
       %td= workout.workout_date
-      %td= workout.description
+      %td= link_to truncate(workout.description), workout
       %td= workout.power
       %td= workout.crossfit_workout_id
-      %td= link_to 'Show', workout
       %td= link_to 'Edit', edit_workout_path(workout)
       %td= link_to 'Destroy', workout, :confirm => 'Are you sure?', :method => :delete
 
