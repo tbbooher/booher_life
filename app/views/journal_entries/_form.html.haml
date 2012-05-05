@@ -25,8 +25,8 @@
     = f.input :facepicking, as: :range, input_html: {min: 1, max: 5, step: 0.25}
     = f.input :sick, as: :boolean
     = f.input :health_statement
-    = f.input :flossed
-    = f.input :workout
+    = f.input :flossed, as: :boolean
+    = f.input :workout, as: :boolean
 
   .form-actions
     = f.button :submit

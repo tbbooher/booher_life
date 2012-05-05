@@ -15,12 +15,11 @@
     -#%th Stress
     %th
     %th
-    %th
 
   - @journal_entries.each do |journal_entry|
     %tr
       %td= journal_entry.entry_date
-      %td= truncate(journal_entry.description, length: 50)
+      %td= link_to truncate(journal_entry.description, length: 50), journal_entry
       -#%td= journal_entry.purity
       -#%td= journal_entry.fitness
       -#%td= journal_entry.devotional
@@ -28,7 +27,6 @@
       -#%td= journal_entry.relational
       -#%td= journal_entry.discipline
       -#%td= journal_entry.stress
-      %td= link_to 'Show', journal_entry
       %td= link_to 'Edit', edit_journal_entry_path(journal_entry)
       %td= link_to 'Destroy', journal_entry, :confirm => 'Are you sure?', :method => :delete
 
