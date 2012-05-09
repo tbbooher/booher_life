@@ -19,6 +19,7 @@ class JournalEntry
   field :health_statement, :type => String
   field :to_do, type: String
   field :memory_verse, type: String
+  field :friends_in_focus, type: String
 
 
 end

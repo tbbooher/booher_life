@@ -15,14 +15,15 @@
     = f.input :description, as: :text
     = f.input :to_do, as: :text
     = f.input :memory_verse, as: :text
-    = f.input :purity, as: :range, input_html: {min: 1, max: 5, step: 0.25} 
+    = f.input :purity, as: :range, input_html: {min: 1, max: 5, step: 0.25}, hint: "high is pure"
     = f.input :fitness, as: :range, input_html: {min: 1, max: 5, step: 0.25}
     = f.input :devotional, as: :range, input_html: {min: 1, max: 5, step: 0.25}
     = f.input :chrissy, as: :range, input_html: {min: 1, max: 5, step: 0.25}
     = f.input :relational, as: :range, input_html: {min: 1, max: 5, step: 0.25}
+    = f.input :friends_in_focus
     = f.input :discipline, as: :range, input_html: {min: 1, max: 5, step: 0.25}
     = f.input :stress, as: :range, input_html: {min: 1, max: 5, step: 0.25}
-    = f.input :facepicking, as: :range, input_html: {min: 1, max: 5, step: 0.25}
+    = f.input :facepicking, as: :range, input_html: {min: 1, max: 5, step: 0.25}, hint: "high is good"
     = f.input :sick, as: :boolean
     = f.input :health_statement
     = f.input :flossed, as: :boolean
