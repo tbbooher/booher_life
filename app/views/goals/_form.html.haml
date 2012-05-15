@@ -2,10 +2,10 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :time_frame
-    = f.input :description
-    = f.input :completion_date
-    = f.input :category
+    = f.input :time_frame, collection: [:near, :mid, :far]
+    = f.input :description, as: :text
+    = f.input :completion_date, as: :date
+    = f.input :category, collection: [:faith, :work, :family, :community, :fitness]
 
   .form-actions
     = f.button :submit
