@@ -1,0 +1,11 @@
+= simple_form_for(@goal) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :time_frame
+    = f.input :description
+    = f.input :completion_date
+    = f.input :category
+
+  .form-actions
+    = f.button :submit
