@@ -1,52 +1,68 @@
-            saving_goals GET    /saving_goals(.:format)                               saving_goals#index
-                         POST   /saving_goals(.:format)                               saving_goals#create
-         new_saving_goal GET    /saving_goals/new(.:format)                           saving_goals#new
-        edit_saving_goal GET    /saving_goals/:id/edit(.:format)                      saving_goals#edit
-             saving_goal GET    /saving_goals/:id(.:format)                           saving_goals#show
-                         PUT    /saving_goals/:id(.:format)                           saving_goals#update
-                         DELETE /saving_goals/:id(.:format)                           saving_goals#destroy
-         journal_entries GET    /journal_entries(.:format)                            journal_entries#index
-                         POST   /journal_entries(.:format)                            journal_entries#create
-       new_journal_entry GET    /journal_entries/new(.:format)                        journal_entries#new
-      edit_journal_entry GET    /journal_entries/:id/edit(.:format)                   journal_entries#edit
-           journal_entry GET    /journal_entries/:id(.:format)                        journal_entries#show
-                         PUT    /journal_entries/:id(.:format)                        journal_entries#update
-                         DELETE /journal_entries/:id(.:format)                        journal_entries#destroy
-                workouts GET    /workouts(.:format)                                   workouts#index
-                         POST   /workouts(.:format)                                   workouts#create
-             new_workout GET    /workouts/new(.:format)                               workouts#new
-            edit_workout GET    /workouts/:id/edit(.:format)                          workouts#edit
-                 workout GET    /workouts/:id(.:format)                               workouts#show
-                         PUT    /workouts/:id(.:format)                               workouts#update
-                         DELETE /workouts/:id(.:format)                               workouts#destroy
-     stressor_next_steps GET    /stressors/:stressor_id/next_steps(.:format)          next_steps#index
-                         POST   /stressors/:stressor_id/next_steps(.:format)          next_steps#create
-  new_stressor_next_step GET    /stressors/:stressor_id/next_steps/new(.:format)      next_steps#new
- edit_stressor_next_step GET    /stressors/:stressor_id/next_steps/:id/edit(.:format) next_steps#edit
-      stressor_next_step GET    /stressors/:stressor_id/next_steps/:id(.:format)      next_steps#show
-                         PUT    /stressors/:stressor_id/next_steps/:id(.:format)      next_steps#update
-                         DELETE /stressors/:stressor_id/next_steps/:id(.:format)      next_steps#destroy
-               stressors GET    /stressors(.:format)                                  stressors#index
-                         POST   /stressors(.:format)                                  stressors#create
-            new_stressor GET    /stressors/new(.:format)                              stressors#new
-           edit_stressor GET    /stressors/:id/edit(.:format)                         stressors#edit
-                stressor GET    /stressors/:id(.:format)                              stressors#show
-                         PUT    /stressors/:id(.:format)                              stressors#update
-                         DELETE /stressors/:id(.:format)                              stressors#destroy
-                    root        /                                                     home#index
-                    root        /                                                     home#index
-        new_user_session GET    /users/sign_in(.:format)                              devise/sessions#new
-            user_session POST   /users/sign_in(.:format)                              devise/sessions#create
-    destroy_user_session DELETE /users/sign_out(.:format)                             devise/sessions#destroy
-           user_password POST   /users/password(.:format)                             devise/passwords#create
-       new_user_password GET    /users/password/new(.:format)                         devise/passwords#new
-      edit_user_password GET    /users/password/edit(.:format)                        devise/passwords#edit
-                         PUT    /users/password(.:format)                             devise/passwords#update
-cancel_user_registration GET    /users/cancel(.:format)                               devise/registrations#cancel
-       user_registration POST   /users(.:format)                                      devise/registrations#create
-   new_user_registration GET    /users/sign_up(.:format)                              devise/registrations#new
-  edit_user_registration GET    /users/edit(.:format)                                 devise/registrations#edit
-                         PUT    /users(.:format)                                      devise/registrations#update
-                         DELETE /users(.:format)                                      devise/registrations#destroy
-                   users GET    /users(.:format)                                      users#index
-                    user GET    /users/:id(.:format)                                  users#show
+                             goals GET    /goals(.:format)                                      goals#index
+                                   POST   /goals(.:format)                                      goals#create
+                          new_goal GET    /goals/new(.:format)                                  goals#new
+                         edit_goal GET    /goals/:id/edit(.:format)                             goals#edit
+                              goal GET    /goals/:id(.:format)                                  goals#show
+                                   PUT    /goals/:id(.:format)                                  goals#update
+                                   DELETE /goals/:id(.:format)                                  goals#destroy
+                  rewards_programs GET    /rewards_programs(.:format)                           rewards_programs#index
+                                   POST   /rewards_programs(.:format)                           rewards_programs#create
+               new_rewards_program GET    /rewards_programs/new(.:format)                       rewards_programs#new
+              edit_rewards_program GET    /rewards_programs/:id/edit(.:format)                  rewards_programs#edit
+                   rewards_program GET    /rewards_programs/:id(.:format)                       rewards_programs#show
+                                   PUT    /rewards_programs/:id(.:format)                       rewards_programs#update
+                                   DELETE /rewards_programs/:id(.:format)                       rewards_programs#destroy
+                      saving_goals GET    /saving_goals(.:format)                               saving_goals#index
+                                   POST   /saving_goals(.:format)                               saving_goals#create
+                   new_saving_goal GET    /saving_goals/new(.:format)                           saving_goals#new
+                  edit_saving_goal GET    /saving_goals/:id/edit(.:format)                      saving_goals#edit
+                       saving_goal GET    /saving_goals/:id(.:format)                           saving_goals#show
+                                   PUT    /saving_goals/:id(.:format)                           saving_goals#update
+                                   DELETE /saving_goals/:id(.:format)                           saving_goals#destroy
+          journal_entries_analysis GET    /journal_entries/analysis(.:format)                   journal_entries#analysis
+journal_entries_journal_entry_data GET    /journal_entries/journal_entry_data(.:format)         journal_entries#journal_entry_data
+                   journal_entries GET    /journal_entries(.:format)                            journal_entries#index
+                                   POST   /journal_entries(.:format)                            journal_entries#create
+                 new_journal_entry GET    /journal_entries/new(.:format)                        journal_entries#new
+                edit_journal_entry GET    /journal_entries/:id/edit(.:format)                   journal_entries#edit
+                     journal_entry GET    /journal_entries/:id(.:format)                        journal_entries#show
+                                   PUT    /journal_entries/:id(.:format)                        journal_entries#update
+                                   DELETE /journal_entries/:id(.:format)                        journal_entries#destroy
+                          workouts GET    /workouts(.:format)                                   workouts#index
+                                   POST   /workouts(.:format)                                   workouts#create
+                       new_workout GET    /workouts/new(.:format)                               workouts#new
+                      edit_workout GET    /workouts/:id/edit(.:format)                          workouts#edit
+                           workout GET    /workouts/:id(.:format)                               workouts#show
+                                   PUT    /workouts/:id(.:format)                               workouts#update
+                                   DELETE /workouts/:id(.:format)                               workouts#destroy
+               stressor_next_steps GET    /stressors/:stressor_id/next_steps(.:format)          next_steps#index
+                                   POST   /stressors/:stressor_id/next_steps(.:format)          next_steps#create
+            new_stressor_next_step GET    /stressors/:stressor_id/next_steps/new(.:format)      next_steps#new
+           edit_stressor_next_step GET    /stressors/:stressor_id/next_steps/:id/edit(.:format) next_steps#edit
+                stressor_next_step GET    /stressors/:stressor_id/next_steps/:id(.:format)      next_steps#show
+                                   PUT    /stressors/:stressor_id/next_steps/:id(.:format)      next_steps#update
+                                   DELETE /stressors/:stressor_id/next_steps/:id(.:format)      next_steps#destroy
+                         stressors GET    /stressors(.:format)                                  stressors#index
+                                   POST   /stressors(.:format)                                  stressors#create
+                      new_stressor GET    /stressors/new(.:format)                              stressors#new
+                     edit_stressor GET    /stressors/:id/edit(.:format)                         stressors#edit
+                          stressor GET    /stressors/:id(.:format)                              stressors#show
+                                   PUT    /stressors/:id(.:format)                              stressors#update
+                                   DELETE /stressors/:id(.:format)                              stressors#destroy
+                              root        /                                                     home#index
+                              root        /                                                     home#index
+                  new_user_session GET    /users/sign_in(.:format)                              devise/sessions#new
+                      user_session POST   /users/sign_in(.:format)                              devise/sessions#create
+              destroy_user_session DELETE /users/sign_out(.:format)                             devise/sessions#destroy
+                     user_password POST   /users/password(.:format)                             devise/passwords#create
+                 new_user_password GET    /users/password/new(.:format)                         devise/passwords#new
+                edit_user_password GET    /users/password/edit(.:format)                        devise/passwords#edit
+                                   PUT    /users/password(.:format)                             devise/passwords#update
+          cancel_user_registration GET    /users/cancel(.:format)                               devise/registrations#cancel
+                 user_registration POST   /users(.:format)                                      devise/registrations#create
+             new_user_registration GET    /users/sign_up(.:format)                              devise/registrations#new
+            edit_user_registration GET    /users/edit(.:format)                                 devise/registrations#edit
+                                   PUT    /users(.:format)                                      devise/registrations#update
+                                   DELETE /users(.:format)                                      devise/registrations#destroy
+                             users GET    /users(.:format)                                      users#index
+                              user GET    /users/:id(.:format)                                  users#show
