@@ -2,6 +2,7 @@
   = f.error_notification
 
   .form-inputs
+    = f.input :name, as: :string
     = f.input :time_frame, collection: [:near, :mid, :far]
     = f.input :description, as: :text
     = f.input :completion_date, as: :date
