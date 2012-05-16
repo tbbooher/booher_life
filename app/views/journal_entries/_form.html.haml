@@ -13,7 +13,7 @@
   .form-inputs
     = f.input :entry_date, as: :date
     = f.input :description, as: :text
-    = f.input :to_do, as: :text
+    = f.input :to_do, as: :text, input_html: { style: 'height:300px' }
     = f.input :memory_verse, as: :text
     = f.input :purity, as: :range, input_html: {min: 1, max: 5, step: 0.25}, hint: "high is pure"
     = f.input :fitness, as: :range, input_html: {min: 1, max: 5, step: 0.25}
@@ -28,6 +28,9 @@
     = f.input :health_statement
     = f.input :flossed, as: :boolean
     = f.input :workout, as: :boolean
+    = f.input :problem_of_the_day, as: :text
+    = f.input :problem_attempted, as: :boolean
+    = f.input :problem_solved, as: :boolean
 
   .form-actions
     = f.button :submit

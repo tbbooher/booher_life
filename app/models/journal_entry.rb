@@ -20,6 +20,8 @@ class JournalEntry
   field :to_do, type: String
   field :memory_verse, type: String
   field :friends_in_focus, type: String
-
+  field :problem_of_the_day, type: String
+  field :problem_attempted, type: Boolean
+  field :problem_solved, type: Boolean
 
 end
