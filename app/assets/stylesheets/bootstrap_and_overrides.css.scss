@@ -4,4 +4,15 @@ $iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
 @import "bootstrap";
 body { padding-top: 60px; }
 textarea { width: 100%; height:100px; }
+
+//Checkbox right fix
+label.checkbox {
+  text-align: left !important;
+}
+input[type=checkbox] {
+  margin-right: 10px !important;
+}
+
 @import "bootstrap-responsive";
+
+

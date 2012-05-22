@@ -42,7 +42,6 @@ group :development do
 #    gem 'win32console', :group => :development
 #    gem 'rb-notifu', :group => :development
 # end
-
  gem "guard-bundler", ">= 0.1.3", :group => :development
  gem "guard-rails", ">= 0.0.3", :group => :development
  gem "guard-livereload", ">= 0.3.0", :group => :development
