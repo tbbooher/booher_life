@@ -14,7 +14,7 @@ gem "rspec-rails", ">= 2.9.0.rc2", :group => [:development, :test]
 gem "database_cleaner", ">= 0.7.2", :group => :test
 gem "mongoid-rspec", ">= 1.4.4", :group => :test
 gem "machinist", :group => :test
-gem "factory_girl_rails", ">= 3.1.0", :group => [:development, :test]
+gem "factory_girl_rails", ">= 3.3.0", :group => [:development, :test]
 gem "email_spec", ">= 1.2.1", :group => :test
 gem "cucumber-rails", ">= 1.3.0", :group => :test
 gem "capybara", ">= 1.1.2", :group => :test
