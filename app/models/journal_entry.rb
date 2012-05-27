@@ -6,6 +6,7 @@ class JournalEntry
   field :entry_date, :type => Date
   field :description, :type => String
   field :purity, :type => Integer
+  field :lack_of_discipline, type: Boolean
   field :fitness, :type => Integer
   field :devotional, :type => Integer
   field :chrissy, :type => Integer
