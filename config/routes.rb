@@ -1,5 +1,7 @@
 BooherLife::Application.routes.draw do
 
+  resources :business_transactions
+
   resources :goals
 
   resources :rewards_programs

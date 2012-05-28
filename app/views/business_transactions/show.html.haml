@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Amount:
+  = @business_transaction.amount
+%p
+  %b Type:
+  = @business_transaction.type
+%p
+  %b Account:
+  = @business_transaction.account
+%p
+  %b Note:
+  = @business_transaction.note
+
+= link_to 'Edit', edit_business_transaction_path(@business_transaction)
+\|
+= link_to 'Back', business_transactions_path

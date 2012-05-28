@@ -1,0 +1,25 @@
+%h1 Listing business_transactions
+
+%table
+  %tr
+    %th Amount
+    %th Type
+    %th Account
+    %th Note
+    %th
+    %th
+    %th
+
+  - @business_transactions.each do |business_transaction|
+    %tr
+      %td= business_transaction.amount
+      %td= business_transaction.type
+      %td= business_transaction.account
+      %td= business_transaction.note
+      %td= link_to 'Show', business_transaction
+      %td= link_to 'Edit', edit_business_transaction_path(business_transaction)
+      %td= link_to 'Destroy', business_transaction, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Business transaction', new_business_transaction_path
