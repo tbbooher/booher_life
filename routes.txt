@@ -1,3 +1,10 @@
+             business_transactions GET    /business_transactions(.:format)                      business_transactions#index
+                                   POST   /business_transactions(.:format)                      business_transactions#create
+          new_business_transaction GET    /business_transactions/new(.:format)                  business_transactions#new
+         edit_business_transaction GET    /business_transactions/:id/edit(.:format)             business_transactions#edit
+              business_transaction GET    /business_transactions/:id(.:format)                  business_transactions#show
+                                   PUT    /business_transactions/:id(.:format)                  business_transactions#update
+                                   DELETE /business_transactions/:id(.:format)                  business_transactions#destroy
                              goals GET    /goals(.:format)                                      goals#index
                                    POST   /goals(.:format)                                      goals#create
                           new_goal GET    /goals/new(.:format)                                  goals#new
