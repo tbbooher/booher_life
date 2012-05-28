@@ -4,4 +4,6 @@ class BusinessTransaction
   field :type, :type => Symbol
   field :account, :type => Symbol
   field :note, :type => String
+
+  ACCOUNTS = [:fitwit, :polco]
 end

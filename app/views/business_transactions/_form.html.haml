@@ -3,9 +3,9 @@
 
   .form-inputs
     = f.input :amount
-    = f.input :type
-    = f.input :account
-    = f.input :note
+    = f.input :type, collection: [:income, :expense]
+    = f.input :account, collection: ACCOUNTS
+    = f.input :note, as: :text
 
   .form-actions
     = f.button :submit
