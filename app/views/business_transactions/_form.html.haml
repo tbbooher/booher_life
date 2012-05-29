@@ -4,7 +4,7 @@
   .form-inputs
     = f.input :amount
     = f.input :type, collection: [:income, :expense]
-    = f.input :account, collection: ACCOUNTS
+    = f.input :account, collection: [:fitwit, :polco]
     = f.input :note, as: :text
 
   .form-actions

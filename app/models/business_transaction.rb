@@ -5,5 +5,4 @@ class BusinessTransaction
   field :account, :type => Symbol
   field :note, :type => String
 
-  ACCOUNTS = [:fitwit, :polco]
 end
